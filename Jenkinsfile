@@ -7,7 +7,7 @@ pipeline{
     }
 
     options {
-        buildDiscarder(logRotator(numToKeepStr: '3')) }         // '3' day keep log of only 3 day old builds and discard remaining
+        buildDiscarder(logRotator(numToKeepStr: '3'))         // '3' day keep log of only 3 day old builds and discard remaining
         disableConcurrentBuilds()
         disableResume()
         timeout(time: 1, unit: 'MINUTES')

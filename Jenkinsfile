@@ -30,7 +30,7 @@ pipeline{
             steps {
                 echo "In in stage one"
                 echo "ENV_VAL IS ${ENV_VAL}"
-                sleep 300
+                // sleep 300
             }
         }
 

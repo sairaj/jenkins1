@@ -3,6 +3,7 @@ pipeline{
 
     environment {               // Pipeline variables
         ENV_VAL = "pipeline.google.com"
+        SSH_CRED = credentials('SSH_CRED')
     }
 
     stages{

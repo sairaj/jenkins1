@@ -6,11 +6,19 @@ pipeline{
         SSH_CRED = credentials('SSH_CRED')
     }
 
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '3')) }         // '3' day keep log of only 3 day old builds and discard remaining
+        disableConcurrentBuilds()
+        disableResume()
+        timeout(time: 1, unit: 'MINUTES')
+    }
+
     stages{
         stage('One'){
             steps {
                 echo "In in stage one"
                 echo "ENV_VAL IS ${ENV_VAL}"
+                sleep 300
             }
         }
 

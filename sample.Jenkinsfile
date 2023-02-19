@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
+    stages{
+        stage('My first Declarative pipeline'){
+            steps{
+                echo "Hello World"
             }
         }
     }

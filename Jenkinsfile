@@ -28,6 +28,7 @@ pipeline{
                 sh '''echo Hello World
                     echo Hai World
                     echo I am using pipeline syntax generator
+                    env
                 '''
             }
         }

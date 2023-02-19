@@ -33,6 +33,9 @@ pipeline{
 
     stages{
         stage('One'){
+            when {
+                environment name: 'CHOICE', value: 'Three'
+            }
             steps {
                 echo "In in stage one"
                 echo "ENV_VAL IS ${ENV_VAL}"

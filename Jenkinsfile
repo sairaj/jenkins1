@@ -63,6 +63,7 @@ pipeline{
                     echo Hai World
                     echo I am using pipeline syntax generator
                     env
+                    hostname
                 '''
             }
         }

@@ -42,7 +42,9 @@ pipeline{
                 echo "In in stage one"
                 echo "ENV_VAL IS ${ENV_VAL}"
                 // sleep 300
-                sh '''mvn --version'''
+                sh "mvn --version"
+                sh "hostname"
+                sh "sleep 300"
             }
         }
 
@@ -53,6 +55,7 @@ pipeline{
             steps {
                 echo "Im in stage two"
                 echo "ENV_VAL IS ${ENV_VAL}"
+                sh "sleep 300"
             }
         }
 
@@ -64,6 +67,7 @@ pipeline{
                     echo I am using pipeline syntax generator
                     env
                     hostname
+                    sleep 300
                 '''
             }
         }

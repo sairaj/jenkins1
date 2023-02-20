@@ -1,5 +1,7 @@
 pipeline{
-    agent ws-node
+    agent {
+        label 'ANSIBLE'
+    }
 
     environment {               // Pipeline variables
         ENV_VAL = "pipeline.google.com"

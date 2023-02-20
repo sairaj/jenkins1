@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent ws-node
 
     environment {               // Pipeline variables
         ENV_VAL = "pipeline.google.com"
